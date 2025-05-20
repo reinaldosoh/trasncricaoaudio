@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // Opção 1: Salvar localmente como arquivo de texto
+        // Salvar localmente como arquivo de texto
         const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -78,31 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-        
-        // Opção 2: Enviar para o servidor (opcional)
-        /*
-        fetch('/api/save-transcript', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                transcript: text,
-                filename: `transcricao_${new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-')}.txt`
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                statusElement.textContent = 'Transcrição salva com sucesso!';
-            } else {
-                statusElement.textContent = `Erro ao salvar: ${data.error}`;
-            }
-        })
-        .catch(error => {
-            statusElement.textContent = `Erro ao salvar: ${error.message}`;
-        });
-        */
         
         statusElement.textContent = 'Transcrição salva com sucesso!';
     }
