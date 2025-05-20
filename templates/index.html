@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcrição de Áudio em Tempo Real</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Transcrição de Áudio em Tempo Real</h1>
+        </header>
+        
+        <main>
+            <div class="controls">
+                <button id="startBtn" class="btn">Iniciar Transcrição</button>
+                <button id="stopBtn" class="btn" disabled>Parar</button>
+                <button id="clearBtn" class="btn">Limpar</button>
+                <button id="saveBtn" class="btn">Salvar</button>
+            </div>
+            
+            <div class="status">
+                <p id="status">Pronto para iniciar a transcrição</p>
+            </div>
+            
+            <div class="transcript-container">
+                <h2>Transcrição:</h2>
+                <div id="transcript" class="transcript" contenteditable="true"></div>
+            </div>
+            
+            <div class="info">
+                <h3>Instruções:</h3>
+                <ul>
+                    <li>Clique em "Iniciar Transcrição" e comece a falar</li>
+                    <li>O texto será transcrito em tempo real</li>
+                    <li>Clique em "Parar" para finalizar a transcrição</li>
+                    <li>Você pode editar o texto diretamente na caixa de transcrição</li>
+                    <li>Clique em "Salvar" para baixar a transcrição como arquivo de texto</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 - Assistente de Transcrição</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

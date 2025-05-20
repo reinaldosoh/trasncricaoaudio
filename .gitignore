@@ -1,0 +1,34 @@
+# Arquivos Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual
+venv/
+env/
+.env
+
+# Arquivos de cache
+.cache/
+.pytest_cache/
+
+# Arquivos de log
+*.log
+
+# Arquivos de áudio temporários
+*.mp3
+*.wav
+
+# Diretório de transcrições
+transcricoes/
+
+# Arquivos do sistema
+.DS_Store
+Thumbsdb
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
